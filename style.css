@@ -1,0 +1,29 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    scroll-behavior: smooth;
+}
+.bg-navy { background-color: #001f3f; }
+.text-navy { color: #001f3f; }
+.text-gold { color: #d4af37; }
+.bg-gold { background-color: #d4af37; }
+.border-gold { border-color: #d4af37; }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cta-button {
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+}
+.story-card {
+    border-left: 4px solid #d4af37;
+}
