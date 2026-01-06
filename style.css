@@ -30,28 +30,10 @@ body {
 
 .hero-bg {
     background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('images/hero-bg.png');
-    background-size: cover; /* Changed to cover to fill, but if they want "not cut", maybe they mean the content. */
-    /* Re-reading: "画像が切れないように". If I use contain, it has bars. */
-    /* Let's try background-size: 100% auto; and background-position: top center; so top is never cut? */
-    /* Or maybe allow it to scroll? */
-    /* Actually, a common issue is mobile portrait. */
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-@media (min-width: 768px) {
-    .hero-bg {
-        background-size: cover;
-    }
-}
-
-/* If user insisted on "not cut", let's try 100% 100% or contain. */
-/* I'll use contain + background color. */
-.hero-bg {
-    background-image: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.8)), url('images/hero-bg.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    background-color: #001f3f; /* Fallback to fill space */
+    background-color: #001f3f;
+    min-height: 600px;
 }
 
